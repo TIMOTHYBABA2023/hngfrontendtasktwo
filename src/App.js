@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import Homescreen from '../src/components/herosection/Homescreen';
+import Phonecategory from "./components/phonecategory/Phonecategory";
+import Shoppingcart from "./components/shoppingcart/Shoppingcart"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Phonecatalog from "./components/phonecategory/Phonecatalog";
+
+export default function App() {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const handleProductSelect = (product) => {
+        setSelectedProduct(product);
+    };
+
+    return (
+        <div className="App">
+                <Homescreen />
+                {/* <Phonecategory /> */}
+                {/* <Shoppingcart selectedProduct={selectedProduct} /> */}
+        </div>
+    );
 }
 
-export default App;

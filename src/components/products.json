@@ -1,0 +1,63 @@
+[
+    {
+        "id":"1",
+        "name":"iphone 14 PRO MAX",
+        "category":"Phones",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 1.png"
+    },
+    {
+        "id":"2",
+        "name":"iphone 14 PRO MAX",
+        "category":"Tablets",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 2.png"
+    },
+    {
+        "id":"3",
+        "name":"iphone 14 PRO MAX",
+        "category":"Phones",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 3.png"
+    },
+    {
+        "id":"4",
+        "name":"iphone 14 PRO MAX",
+        "category":"Laptops",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 4.png"
+    },
+    {
+        "id":"4",
+        "name":"iphone 14 PRO MAX",
+        "category":"Phones",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 5.png"
+    },
+    {
+        "id":"6",
+        "name":"iphone 14 PRO MAX",
+        "category":"Desktops",
+        "price":"12",
+        "rating":"",
+        "quantity":"23" ,
+        "shipping_price" :"2",
+        "image":"phone 6.png"
+    }
+    
+]
