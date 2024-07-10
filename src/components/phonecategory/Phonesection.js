@@ -13,10 +13,9 @@ export default function Phonesection(){
                             <button >Search</button>
                         </div>
                     <div className="phonesection--container">
-            </div></div>
-                </div>
-                {/* <Phonesection /> */}
-            
+            </div>
+            </div>
+                </div>            
             </div>
         </div>        
     )

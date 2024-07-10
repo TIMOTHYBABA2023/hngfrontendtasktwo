@@ -43,8 +43,7 @@ export default function Phonecatalog(){
             <Demo />
         </div>
         <div className="product-display">
-            <div className="product-stack">
-                <Products />
+            <div className="product-stack">-
                 <Pagenumbering />
                 <ViewButton />
             </div>

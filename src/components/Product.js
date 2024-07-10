@@ -10,7 +10,6 @@ export default function Product(props) {
         <div className="product">
             <div className="product--list">
                 <img src={imageSrc} alt={props.name} />
-                <div className="hidden--div"></div>
                 <div className="product--details">
                     <h3>{props.category}</h3>
                     <p>Apple, Dell, Hp, Lenovo, Acer, Samsung, Microsoft, LG, Toshiba, Huawei ...<span className="bold">more</span></p>

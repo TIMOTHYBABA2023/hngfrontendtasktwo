@@ -1,10 +1,37 @@
+// import React, { useState } from "react";
+// import './App.css';
+// import Homescreen from '../src/components/herosection/Homescreen';
+// import Phonecategory from "./components/phonecategory/Phonecategory";
+// import Shoppingcart from "./components/shoppingcart/Shoppingcart"
+
+// import Phonecatalog from "./components/phonecategory/Phonecatalog";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+
+// export default function App() {
+//     const [selectedProduct, setSelectedProduct] = useState(null);
+
+//     const handleProductSelect = (product) => {
+//         setSelectedProduct(product);
+//     };
+
+//     return (
+//         <div className="App">
+//                 <Navbar />
+//                 <Homescreen />
+//                 {/* <Phonecategory /> */}
+//                 {/* <Shoppingcart selectedProduct={selectedProduct} /> */}
+//                 <Footer />
+//         </div>
+//     );
+// }
+
 import React, { useState } from "react";
 import './App.css';
-import Homescreen from '../src/components/herosection/Homescreen';
+import Homescreen from './components/herosection/Homescreen';
 import Phonecategory from "./components/phonecategory/Phonecategory";
-import Shoppingcart from "./components/shoppingcart/Shoppingcart"
-
-import Phonecatalog from "./components/phonecategory/Phonecatalog";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -15,9 +42,13 @@ export default function App() {
 
     return (
         <div className="App">
-                <Homescreen />
-                {/* <Phonecategory /> */}
-                {/* <Shoppingcart selectedProduct={selectedProduct} /> */}
+            <Navbar />
+            {!selectedProduct ? (
+                <Homescreen onProductSelect={handleProductSelect} />
+            ) : (
+                <Phonecategory selectedProduct={selectedProduct} onProductSelect={handleProductSelect} />
+            )}
+            <Footer />
         </div>
     );
 }

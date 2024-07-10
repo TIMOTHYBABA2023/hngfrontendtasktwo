@@ -4,7 +4,7 @@ import Herosection from "../herosection/Herosection";
 import Footer from "../Footer";
 import { Button, Flex } from 'antd';
 
-export default function Homescreen(){
+export default function Homescreen({ onProductSelect }){
     const ViewButton = () => (
         <Flex wrap gap="small">
           <Button type="primary" className="bigbutton">
@@ -14,9 +14,10 @@ export default function Homescreen(){
     return(
         <div className="homescreen">
             <Herosection />
-            <Products />
-            <ViewButton />
-            <Footer />
+            <Products onProductSelect={onProductSelect} />
+            <div className="viewbutton">
+              <ViewButton />
+            </div>
         </div>
         
     )

@@ -1,25 +1,29 @@
-import React from "react"
-import Product from "./Product.js";
-import products from "./products.json"
+import React from "react";
+import Product from "./Product";
+import products from "./products.json";
 import { Button, Flex } from 'antd';
-import Storeproducts from "./products.json"
 
+export default function Products({ onProductSelect }) {
+    const uniqueCategories = products.reduce((acc, product) => {
+        if (!acc.some(item => item.category === product.category)) {
+            acc.push(product);
+        }
+        return acc;
+    }, []);
 
-export default function Products(){        
-    const storeproductgotten = Storeproducts.map(product => {
-        return <Product 
-            key={product.id}
-            {...product}
-        />
-    })
+    const handleProductClick = (product) => {
+        if (typeof onProductSelect === 'function') {
+            onProductSelect(product);
+        } else {
+            console.error("onProductSelect is not a function");
+        }
+    };
 
-      const ViewButton = () => (
-        <Flex wrap gap="small">
-          <Button type="primary" className="my--viewmore--button">
-            View More Gadjets
-          </Button>
-        </Flex>)
-
+    const storeproductgotten = uniqueCategories.map(product => (
+        <div key={product.id} className="product-item" onClick={() => handleProductClick(product)}>
+            <Product {...product} />
+        </div>
+    ));
 
     return (
         <div className="products">
@@ -27,7 +31,5 @@ export default function Products(){
                 {storeproductgotten}
             </div>
         </div>
-        
-    )
+    );
 }
-
